@@ -6,13 +6,13 @@ python:
   - "2.7"
 
 env:
-  - TOXENV=slp27travis
+  - TOXENV=27slptravis
   - TOXENV=pypy
   - TOXENV=pypy3
 
 before_install:
-  - if [ \"$TOX_ENV\" == \"27slptravis\" ]; then wget http://www.robg3d.com/downloads/stackless-2.7.6_amd64.zip; fi
-  - if [ \"$TOX_ENV\" == \"27slptravis\" ]; then unzip -q stackless-2.7.6_amd64.zip -d $HOME; fi
+  - if [ \"$TOXENV\" == \"27slptravis\" ]; then wget http://www.robg3d.com/downloads/stackless-2.7.6_amd64.zip; fi
+  - if [ \"$TOXENV\" == \"27slptravis\" ]; then unzip -q stackless-2.7.6_amd64.zip -d $HOME; fi
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install:
@@ -33,13 +33,13 @@ cache:
 
 # After you create the Github repo and add it to Travis, run the
 # travis_pypi_setup.py script to finish PyPI deployment setup
-; deploy:
-;  provider: pypi
-;   distributions: sdist bdist_wheel
-;   user: benzid-wael
-;   password:
-;     secure: PLEASE_REPLACE_ME
-;   on:
-;     tags: true
-;     repo: benzid-wael/octopus
-;     condition: $TOXENV == py27
+# deploy:
+#  provider: pypi
+#   distributions: sdist bdist_wheel
+#   user: benzid-wael
+#   password:
+#     secure: PLEASE_REPLACE_ME
+#   on:
+#     tags: true
+#     repo: OctopusProject/octopus
+#     condition: $TOXENV == py27
