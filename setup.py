@@ -31,7 +31,7 @@ setup(
     long_description=readme,
     author="Wael Ben Zid El Guebsi",
     author_email='benzid.wael@hotmail.fr',
-    url='https://github.com/benzid-wael/octopus',
+    url='https://github.com/OctopusProject/octopus',
     packages=[
         'octopus',
     ],
